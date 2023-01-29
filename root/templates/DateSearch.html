@@ -1,0 +1,55 @@
+
+    <body>
+
+        <html lang="ja">
+            <head>
+              <meta charset="UTF-8">
+              <title>出席管理システム</title>
+              <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+            </head>
+            <!-- ボタンにするスタイルシート ここまで -->
+            <!-- これはボタン
+            <a href="#tag1" class="sample3_btn">出席</a>-->
+        
+            <!-- 表のセンタリングのためのスタイル ここから -->
+            <style>
+                table tr td{
+                  width: 100px;
+                  text-align: center;
+                }
+              </style>
+            <!-- 表のセンタリングのためのスタイル ここまで -->
+        
+            <title>出席管理システム</title>
+            <big>出席管理システム</big><br>
+            <big>～日付検索メニュー～</big>
+            <br><br>
+            <a href="/">出席送信</a><br>
+            <a href="/DisplayDate">出席確認</a><br>
+            <a href="/DateSearch">日付検索</a><br>
+            <a href="/NameSearch">名前検索</a><br> 
+
+            <!--検索バー-->
+            <form align="center"  action="自分のサイトのURL">
+              <input id="sbox5"  id="s" name="s" type="text" placeholder="キーワードを入力" />
+              <input id="sbtn5" type="submit" value="検索" />
+              </form>
+
+              <h2 style="text-align:center">2023/n/n分の出席</h2>
+
+              <table align="center" border="2">
+                <tr><th>名前</th><th>ID</th><th>出席</th></tr>
+                <tr><td>ジャーク</td><td>20X3151</td><td> 
+                    
+                <tr><td>ランポ</td><td>20X3000</td><td>
+                  
+                <tr><td>りんご</td><td>00N0000</td><td>
+                  
+                <tr><td>ゴリラ</td><td>00N0001</td><td>
+                  
+                <tr><td>ラッパ</td><td>00N0002</td><td> 
+                  
+              </table>
+
+            
+            

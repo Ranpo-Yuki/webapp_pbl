@@ -1,0 +1,55 @@
+
+    <body>
+
+        <html lang="ja">
+            <head>
+              <meta charset="UTF-8">
+              <title>出席管理システム</title>
+              <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+            </head>
+            <!-- ボタンにするスタイルシート ここまで -->
+            <!-- これはボタン
+            <a href="#tag1" class="sample3_btn">出席</a>-->
+        
+            <!-- 表のセンタリングのためのスタイル ここから -->
+            <style>
+                table tr td{
+                  width: 100px;
+                  text-align: center;
+                }
+              </style>
+            <!-- 表のセンタリングのためのスタイル ここまで -->
+        
+            <title>出席管理システム</title>
+            <big>出席管理システム</big><br>
+            <big>～名前検索メニュー～</big>
+            <br><br>
+            <a href="/">出席送信</a><br>
+            <a href="/DisplayDate">出席確認</a><br>
+            <a href="/DateSearch">日付検索</a><br>
+            <a href="/NameSearch">名前検索</a><br> 
+
+            <!--メンバーリスト-->
+            <table align="center" border="2">
+              <tr><th>メンバーリスト</th></tr>
+              {% for m in member%}
+              <tr><td>{{ m }}</td>
+              {% endfor %}
+            </table>
+            <br><br>
+
+            <!--検索バー-->
+              <form action="/NameSearch" method="post" align="center">
+                <input type="text" name="name" value="{{ name }}" placeholder="名前を入力">
+                <input id="sbtn5" type="submit" value="検索" />
+              </form>
+
+
+              <h2 style="text-align:center">{{ user['username'] }}さんの出席</h2>
+
+              <table align="center" border="2">
+                <tr><th>出席日</th></tr>
+                {% for u in user_all%}
+                <tr><td>{{ u }}</td>
+                {% endfor %}
+              </table>

@@ -1,0 +1,53 @@
+<head>
+    <meta charset="UTF-8">
+    <title>出席管理システム</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+</head>
+
+<body>
+    <!-- 表のセンタリングのためのスタイル ここから -->
+    <style>
+        table tr td{
+          width: 100px;
+          text-align: center;
+        }
+      </style>
+    <!-- 表のセンタリングのためのスタイル ここまで -->
+
+    <title>出席管理システム</title>
+    <big>出席管理システム</big><br>
+    <big>～最終出席確認メニュー～</big>
+    <br><br>
+    <a href="/">出席送信</a><br>
+    <a href="/DisplayDate">出席確認</a><br>
+    <a href="/DateSearch">日付検索</a><br>
+    <a href="/NameSearch">名前検索</a><br> 
+
+    
+    <table align="center" border="2">
+        <tr><th>名前</th><th>ID</th><th>最終出席日時</th></tr>
+        <tr><td>ジャーク</td><td>20X3151</td><td> 
+            <p>
+                {{ Jerk['datetime'] }}
+            </p>
+        <tr><td>ランポ</td><td>20X3000</td><td>
+          <p>
+            {{ Ranpo['datetime'] }}
+          </p>
+        <tr><td>りんご</td><td>00N0000</td><td>
+          <p>
+            {{ Apple['datetime'] }}
+          </p>
+        <tr><td>ゴリラ</td><td>00N0001</td><td>
+          <p>
+            {{ Gorilla['datetime'] }}
+          </p>
+        <tr><td>ラッパ</td><td>00N0002</td><td> 
+          <p>
+            {{ Bugle['datetime'] }}
+          </p>
+      </table>
+
+
+
+  </body>

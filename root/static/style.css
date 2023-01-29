@@ -1,0 +1,66 @@
+/* < index.htmlの表の書式定義　↓↓↓ >*/
+/*table, tr, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+  }
+*/   
+
+  table {
+    width: 400px;
+  }
+   
+  th{
+    width: 150px;
+    background-color: darkgrey;
+    padding: 10px;
+  }
+   
+  td {
+    width: 250px;
+    text-align: center;
+  }
+  /* < index.htmlの表の書式定義　↑↑↑ >  */
+
+  /* < DateSearch.htmlの表の定義　↓↓↓ > */
+  tableDS {
+    width: 600px;
+  }
+   
+  thDS{
+    width: 150px;
+    background-color: darkgrey;
+    padding: 10px;
+  }
+   
+  tdDS {
+    width: 250px;
+    text-align: center;
+  }
+  /* < DateSearch.htmlの表の定義　↑↑↑ > */
+
+  /* < ボタンの書式定義　ここから >  */
+  .sample3_btn {
+    display: inline-block;
+    padding: 5px 10px 5px 0px;
+    text-decoration: none;
+    color: white;
+    background: rgb(68, 68, 136);
+    font-weight: bold;
+    border: solid 4px rgb(68,68,136);
+    border-radius: 8px;
+}
+
+.sample3_btn:hover {
+    background: white;
+    color: rgb(68,68,136);
+}
+ /* < ボタンの書式定義　ここまで >  */
+
+ body{
+  /* 背景をグラデーションにする */
+background: linear-gradient(45deg, #70f0b4, rgb(141, 155, 231));
+color:#000000;
+}
+
+
+
